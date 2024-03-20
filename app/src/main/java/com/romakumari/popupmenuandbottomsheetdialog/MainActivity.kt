@@ -50,8 +50,13 @@ class MainActivity : AppCompatActivity() {
 
                              dialogbinding.btn1.setOnClickListener {
                                   dismiss()
-                                 val navController = findNavController(R.id.nav_graph)
+                                 val navController = findNavController(R.id.nav_host_fragment)
                                  navController.navigate(R.id.fragment_first)
+                             }
+                             dialogbinding.btn2.setOnClickListener {
+                                 dismiss()
+                                 val navController = findNavController(R.id.nav_host_fragment)
+                                 navController.navigate(R.id.fragment_second)
                              }
 
                              show()
